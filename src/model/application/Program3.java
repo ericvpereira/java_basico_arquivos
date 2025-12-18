@@ -1,26 +1,19 @@
 package model.application;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Program3 {
     public static void main(String[] args) {
         
-        try {
-            File path = new File("c:\\temp\\texto.txt");
-            Scanner sc = new Scanner(path);
+        int cont = 0;
 
-            int cont = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader("c:\\temp\\texto.txt"))){
 
-            while (sc.hasNextLine()) {
-                sc.nextLine();
+            while (br.readLine() != null) {
                 cont++;
             }
-
-            sc.close();
 
             System.out.println("Total de linhas: " + cont);
 
