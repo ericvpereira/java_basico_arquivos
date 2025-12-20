@@ -24,7 +24,7 @@ public class Program5 {
 
         }
          catch (IOException e) {
-            System.out.println("EROOR: " + e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         }
     } 
 }
